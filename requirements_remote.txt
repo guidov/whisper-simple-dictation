@@ -1,10 +1,5 @@
 openai
 numpy
 soundfile
-# keyboard and sound support
-pynput
 sounddevice==0.5.0
-# grab input box contents
-pyperclip
 pynput
-portaudio19-dev
