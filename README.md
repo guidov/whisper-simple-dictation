@@ -63,3 +63,49 @@ Hold the right Ctrl key while speaking, then release it to transcribe. Press Ctr
 - Works fine with CPU also
 - Internet connection for remote transcription
 - Linux with X11 or Wayland
+
+## Running as a Service
+
+The dictation tool can be run as a systemd user service that starts automatically with your session:
+
+1. Create the service file:
+```bash
+mkdir -p ~/.config/systemd/user/
+cat > ~/.config/systemd/user/whisper-dictation.service << 'EOF'
+[Unit]
+Description=Whisper Dictation Service
+
+[Service]
+ExecStart=/bin/bash -c "source /home/guido/anaconda3/etc/profile.d/conda.sh && conda activate whisperdict && cd /home/guido/whisper-simple-dictation && ./run_dictation_local.sh en"
+StandardOutput=file:/home/guido/logs/whisper-dictation.log
+StandardError=file:/home/guido/logs/whisper-dictation.log
+Restart=always
+
+[Install]
+WantedBy=default.target
+EOF
+```
+
+2. Create logs directory:
+```bash
+mkdir -p ~/logs
+```
+
+3. Enable and start the service:
+```bash
+systemctl --user daemon-reload
+systemctl --user enable whisper-dictation.service
+systemctl --user start whisper-dictation.service
+```
+
+4. Check service status:
+```bash
+systemctl --user status whisper-dictation.service
+```
+
+The service will automatically restart if it fails and start on login. You can:
+- Stop the service: `systemctl --user stop whisper-dictation.service`
+- Start the service: `systemctl --user start whisper-dictation.service`
+- View logs: `tail -f ~/logs/whisper-dictation.log`
+
+Note: Update the paths in the service file to match your conda and project locations.
