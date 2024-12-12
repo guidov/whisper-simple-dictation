@@ -1,7 +1,5 @@
 __pycache__/
 tmp.wav
-venv/
-.venv/
 .env
 .aider*
 .aider.chat.history.md
