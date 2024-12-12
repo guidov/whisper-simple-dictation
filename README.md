@@ -60,5 +60,6 @@ Hold the right Ctrl key while speaking, then release it to transcribe. Press Ctr
 
 - Python 3.10+
 - CUDA-capable GPU for local transcription
+- Works fine with CPU also
 - Internet connection for remote transcription
 - Linux with X11 or Wayland
