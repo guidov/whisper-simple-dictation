@@ -1,0 +1,9 @@
+.vscode
+venv
+
+junk
+.env
+tmp.wav
+__pycache__
+.aider*
+whisper-dictation.service
