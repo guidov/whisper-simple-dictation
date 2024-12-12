@@ -1,0 +1,420 @@
+
+# 2024-09-23 22:31:29.294954
++I want to modify the dictation.py file to more clearly have the option to seperate out the remote OpenAI or Groq part of the code
+
+# 2024-09-23 22:35:36.820735
++/model claude-3-5-sonnet-20240620 
+
+# 2024-09-23 22:35:44.020010
++I want to modify the dictation.py file to more clearly have the option to seperate out the remote OpenAI or Groq part of the code
+
+# 2024-09-23 22:36:28.017471
++y
+
+# 2024-09-23 22:36:33.408407
++/run python dictation.py remote --use-groq
+
+# 2024-09-23 22:36:46.231869
++/run python dictation.py remote
+
+# 2024-09-23 22:36:59.995270
++what is pynput
+
+# 2024-09-23 22:37:12.151749
++/run pip install pynput
+
+# 2024-09-23 22:37:25.687036
++/run pip install -r requirements_local.txt
+
+# 2024-09-23 22:37:40.622882
++/run pip install -r requirements_remote.txt
+
+# 2024-09-23 22:38:44.800064
++——> /bin/bash /home/guido/whisper-simple-dictation/run_dictation_remote.sh en
++/home/guido/whisper-simple-dictation/run_dictation_remote.sh: line 5: venv/bin/python3: No such file or directory
+
+# 2024-09-23 22:39:27.851460
++/run /home/guido/whisper-simple-dictation/run_dictation_remote.sh en
+
+# 2024-09-23 22:40:04.159703
++——> /bin/bash /home/guido/whisper-simple-dictation/run_dictation_remote.sh en
++Traceback (most recent call last):
++  File "/home/guido/whisper-simple-dictation/dictation.py", line 12, in <module>
++    import sounddevice as sd
++  File "/home/guido/anaconda3/lib/python3.11/site-packages/sounddevice.py", line 72, in <module>
++    _lib = _ffi.dlopen(_libname)
++           ^^^^^^^^^^^^^^^^^^^^^
++OSError: cannot load library 'libportaudio.so.2': /home/guido/anaconda3/bin/../lib/libstdc++.so.6: version `GLIBCXX_3.4.32' not found (required by /lib/x86_64-linux-gnu/libjack.so.0)
++
+
+# 2024-09-23 22:40:17.450358
++/run chmod +x /home/guido/whisper-simple-dictation/run_dictation_remote.sh
+
+# 2024-09-23 22:40:17.957759
++/run /home/guido/whisper-simple-dictation/run_dictation_remote.sh en
+
+# 2024-09-23 22:43:25.584495
++OSError: cannot load library 'libportaudio.so.2': /home/guido/anaconda3/bin/../lib/libstdc++.so.6: version `GLIBCXX_3.4.32' not found (required by /lib/x86_64-linux-gnu/libjack.so.0)
+
+# 2024-09-23 22:43:40.215281
++/run sudo apt-get update
+
+# 2024-09-23 22:43:55.695804
++/run sudo apt-get install -y portaudio19-dev
+
+# 2024-09-23 22:44:06.132085
++/run bash run_dictation_remote.sh en
+
+# 2024-12-12 11:04:11.979212
++I have this program which uses python whisper to do STT "dictation.py". I'm using a local whisper model, but the text doesn't always seem to appear when I use the record function . I can use ctrl v after to paste, but I don't want this, I want the text to appear automatically.  
+
+# 2024-12-12 11:04:40.626041
++n
+
+# 2024-12-12 11:06:41.469760
++thanks, it works great now, can you clean up all the code and document the code in dictation.py 
+
+# 2024-12-12 11:15:02.163930
++ n
+
+# 2024-12-12 11:15:05.452110
++n
+
+# 2024-12-12 11:28:14.394072
++fix the README file compared with what I actually do , I only run ——> ./run_dictation_local.sh
++Press Key.ctrl_r to start recording
++Hello, is this working?
++^C
++Exiting...
++(whisperdict) [guido@xxx Thu Dec 12 11:27:42] main ~/whisper-simple-dictation
++——> ./run_dictation_remote.sh
++Press Key.ctrl_r to start recording
++ Hello, is this working?
++
+
+# 2024-12-12 11:29:19.578020
++what is run_dictation_auto_off.sh used for
+
+# 2024-12-12 11:33:29.084290
++is engine.py used anywhere
+
+# 2024-12-12 11:34:47.227036
++\bye
+
+# 2024-12-12 11:36:25.049235
++why am I getting this on git push origin main
+
+# 2024-12-12 11:36:31.167094
++——> git push origin main
+
+# 2024-12-12 11:36:40.639461
++Enumerating objects: 53, done.
+
+# 2024-12-12 11:36:40.646268
++Counting objects: 100% (53/53), done.
+
+# 2024-12-12 11:36:40.651109
++Delta compression using up to 12 threads
+
+# 2024-12-12 11:36:40.655819
++Compressing objects: 100% (45/45), done.
+
+# 2024-12-12 11:36:40.662390
++Writing objects: 100% (45/45), 802.34 KiB | 23.60 MiB/s, done.
+
+# 2024-12-12 11:36:40.668632
++Total 45 (delta 18), reused 0 (delta 0), pack-reused 0
+
+# 2024-12-12 11:36:40.675995
++remote: Resolving deltas: 100% (18/18), completed with 6 local objects.
+
+# 2024-12-12 11:36:40.683921
++remote: error: GH013: Repository rule violations found for refs/heads/main.
+
+# 2024-12-12 11:36:40.687839
++remote: 
+
+# 2024-12-12 11:36:40.692448
++remote: - GITHUB PUSH PROTECTION
+
+# 2024-12-12 11:36:40.742633
++remote:   —————————————————————————————————————————
+
+# 2024-12-12 11:36:40.748762
++remote:     Resolve the following violations before pushing again
+
+# 2024-12-12 11:36:40.751897
++remote: 
+
+# 2024-12-12 11:36:40.756005
++remote:     - Push cannot contain secrets
+
+# 2024-12-12 11:36:40.758695
++remote: 
+
+# 2024-12-12 11:36:40.761403
++remote:     
+
+# 2024-12-12 11:36:40.766792
++remote:      (?) Learn how to resolve a blocked push
+
+# 2024-12-12 11:36:40.779873
++remote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push
+
+# 2024-12-12 11:36:40.784899
++remote:     
+
+# 2024-12-12 11:36:40.794214
++remote:       —— OpenAI API Key ————————————————————————————————————
+
+# 2024-12-12 11:36:40.798580
++remote:        locations:
+
+# 2024-12-12 11:36:40.804781
++remote:          - commit: b47796e95eb71f1a9ac070abf54d01f689ea5693
+
+# 2024-12-12 11:36:40.810377
++remote:            path: whisper-dictation.service:5
+
+# 2024-12-12 11:36:40.816478
++remote:          - commit: b47796e95eb71f1a9ac070abf54d01f689ea5693
+
+# 2024-12-12 11:36:40.822035
++remote:            path: whisper-dictation.service:7
+
+# 2024-12-12 11:36:40.825138
++remote:     
+
+# 2024-12-12 11:36:40.832752
++remote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.
+
+# 2024-12-12 11:36:40.843952
++remote:        https://github.com/guidov/whisper-simple-dictation/security/secret-scanning/unblock-secret/2q7ixuaJ6A71TRTHOe1vT8GIYoy
+
+# 2024-12-12 11:36:40.848730
++remote:     
+
+# 2024-12-12 11:36:40.851257
++remote: 
+
+# 2024-12-12 11:36:40.858883
++To https://github.com/guidov/whisper-simple-dictation.git
+
+# 2024-12-12 11:36:40.866218
++ ! [remote rejected] main -> main (push declined due to repository rule violations)
+
+# 2024-12-12 11:36:40.874552
++error: failed to push some refs to 'https://github.com/guidov/whisper-simple-dictation.git'
+
+# 2024-12-12 11:36:40.879804
++/run git config --get core.hooksPath
+
+# 2024-12-12 11:36:40.879831
++/run git config --get core.hooksPath
+
+# 2024-12-12 11:36:41.391725
++/run ls -la .git/hooks/
+
+# 2024-12-12 11:36:41.391762
++/run ls -la .git/hooks/
+
+# 2024-12-12 11:38:15.189819
++it is still doing it , I can commit the changes
+
+# 2024-12-12 11:38:24.335820
++/run git config --get core.hooksPath
+
+# 2024-12-12 11:38:24.335847
++/run git config --get core.hooksPath
+
+# 2024-12-12 11:38:25.687569
++/run git push -v origin main
+
+# 2024-12-12 11:38:25.687595
++/run git push -v origin main
+
+# 2024-12-12 11:54:20.884192
++how do I remove these commits from my repo:
+
+# 2024-12-12 11:54:26.320315
++remote:          - commit: b47796e95eb71f1a9ac070abf54d01f689ea5693
+
+# 2024-12-12 11:54:26.326447
++remote:            path: whisper-dictation.service:5
+
+# 2024-12-12 11:54:26.332732
++remote:          - commit: b47796e95eb71f1a9ac070abf54d01f689ea5693
+
+# 2024-12-12 11:54:26.337658
++/run git log --oneline
+
+# 2024-12-12 11:54:26.337681
++/run git log --oneline
+
+# 2024-12-12 11:54:47.901633
++/run git rebase -i HASH
+
+# 2024-12-12 11:54:47.901663
++/run git rebase -i HASH
+
+# 2024-12-12 11:54:51.359882
++/run git push --force origin main
+
+# 2024-12-12 11:54:51.360022
++/run git push --force origin main
+
+# 2024-12-12 12:00:58.552859
++How do I get rid of all the commits and start over
+
+# 2024-12-12 12:01:03.735360
++remote:          - commit: b47796e95eb71f1a9ac070abf54d01f689ea5693
+
+# 2024-12-12 12:01:03.742227
++remote:            path: whisper-dictation.service:5
+
+# 2024-12-12 12:01:03.749774
++remote:          - commit: b47796e95eb71f1a9ac070abf54d01f689ea5693
+
+# 2024-12-12 12:01:03.756513
++remote:            path: whisper-dictation.service:7
+
+# 2024-12-12 12:01:03.761333
++/run rm -rf .git
+
+# 2024-12-12 12:01:03.761352
++/run rm -rf .git
+
+# 2024-12-12 12:01:04.283515
++/run git init
+
+# 2024-12-12 12:01:04.283566
++/run git init
+
+# 2024-12-12 12:01:04.799549
++/run git add .
+
+# 2024-12-12 12:01:04.799596
++/run git add .
+
+# 2024-12-12 12:01:05.339547
++/run git commit -m "Initial commit"
+
+# 2024-12-12 12:01:05.339588
++/run git commit -m "Initial commit"
+
+# 2024-12-12 12:01:10.305774
++/run git remote add origin <your-new-repo-url>
+
+# 2024-12-12 12:01:10.305806
++/run git remote add origin <your-new-repo-url>
+
+# 2024-12-12 12:01:10.819035
++/run git push -u origin main --force
+
+# 2024-12-12 12:01:10.819068
++/run git push -u origin main --force
+
+# 2024-12-12 12:03:15.195088
++I need to rename repo from master to main
+
+# 2024-12-12 12:03:23.524522
++/run git branch -M main
+
+# 2024-12-12 12:03:23.524548
++/run git branch -M main
+
+# 2024-12-12 12:03:25.068038
++/run git remote add origin https://github.com/guidov/whisper-simple-dictation.git
+
+# 2024-12-12 12:03:25.068066
++/run git remote add origin https://github.com/guidov/whisper-simple-dictation.git
+
+# 2024-12-12 12:03:25.610033
++/run git push -u origin main --force
+
+# 2024-12-12 12:03:25.610081
++/run git push -u origin main --force
+
+# 2024-12-12 12:04:49.531160
++how do I list the branched
+
+# 2024-12-12 12:04:59.515313
++how do I list the branches in a repo
+
+# 2024-12-12 12:05:22.499346
++/run git branch -a
+
+# 2024-12-12 12:05:22.499375
++/run git branch -a
+
+# 2024-12-12 12:05:25.435278
++/run git branch
+
+# 2024-12-12 12:05:25.435306
++/run git branch
+
+# 2024-12-12 12:05:32.712668
++how do I switch to master
+
+# 2024-12-12 12:07:52.392177
++how do I delete the master 
+
+# 2024-12-12 12:07:56.389292
++/run git branch -d master
+
+# 2024-12-12 12:07:56.389313
++/run git branch -d master
+
+# 2024-12-12 12:08:02.451084
++/run git branch -D master
+
+# 2024-12-12 12:08:02.451125
++/run git branch -D master
+
+# 2024-12-12 12:12:58.846874
++I just want to use run_dictation_local.sh and run_dictation_remote.sh can you clean up the code for only these two executables
+
+# 2024-12-12 12:14:48.235637
++/run pip install -r requirements_local.txt
+
+# 2024-12-12 12:14:48.235664
++/run pip install -r requirements_local.txt
+
+# 2024-12-12 12:15:03.159651
++/run ./run_dictation_local.sh
+
+# 2024-12-12 12:15:03.159690
++/run ./run_dictation_local.sh
+
+# 2024-12-12 12:18:45.366982
++can we get rid of files that are not used in running run_dictation_local.sh run_dictation_remote.sh
+
+# 2024-12-12 12:21:13.633157
++can we get rid of the auto_off code
+
+# 2024-12-12 12:22:19.926483
++can we prune down the repo so that we only need to run run_dictation_local.sh and run_dictation_remote.sh
+
+# 2024-12-12 12:23:20.486260
++/run rm _lagacy_dictation_auto_off_pynput.py junk.py example_service_file.service
+
+# 2024-12-12 12:23:20.486316
++/run rm _lagacy_dictation_auto_off_pynput.py junk.py example_service_file.service
+
+# 2024-12-12 12:23:48.722614
++can we get rid of run_dictation_auto_off.sh and engine.py
+
+# 2024-12-12 12:24:00.516658
++/run rm run_dictation_auto_off.sh engine.py
+
+# 2024-12-12 12:24:00.516686
++/run rm run_dictation_auto_off.sh engine.py
+
+# 2024-12-12 12:24:26.104523
++do we need dictation_auto_off.py in the repo
+
+# 2024-12-12 12:24:32.978768
++/run rm dictation_auto_off.py
+
+# 2024-12-12 12:24:32.978801
++/run rm dictation_auto_off.py
