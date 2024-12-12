@@ -1,0 +1,13 @@
+[Unit]
+Description=Whisper Dictation Service
+
+[Service]
+ExecStart=/bin/bash -c "source /home/guido/anaconda3/etc/profile.d/conda.sh && conda activate whisperdict && cd /home/guido/whisper-simple-dictation && ./run_dictation_local.sh en"
+#ExecStart=/bin/bash -c "source /home/guido/anaconda3/etc/profile.d/conda.sh && conda activate whisperdict && cd /home/guido/whisper-simple-dictation && ./run_dictation_remote.sh en"
+StandardOutput=file:/home/guido/logs/whisper-dictation.log
+StandardError=file:/home/guido/logs/whisper-dictation.log
+Restart=always
+
+[Install]
+WantedBy=default.target
+
