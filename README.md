@@ -7,6 +7,9 @@ A simple speech-to-text dictation tool using Whisper that supports both local an
 - Local transcription using Whisper (near instant)
 - Remote transcription using OpenAI or Groq API
 - Automatic text insertion at cursor position
+## Limitations
+- Does not work in regualar terminals/applications using X11/Wayland
+- I suggest using Electron/TS based terminals (e.g. Waveterm https://github.com/wavetermdev/waveterm)
 
 ## Installation
 
