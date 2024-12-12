@@ -1,6 +1,2 @@
 __pycache__/
-venv/
-.venv/
-.env
 tmp.wav
-.vscode/
