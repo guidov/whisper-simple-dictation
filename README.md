@@ -21,6 +21,12 @@ cd whisper-simple-dictation
 # Create conda environment
 conda create -n whisperdict python=3.10
 conda activate whisperdict
+sudo apt install portaudio19-dev
+conda install -c conda-forge libstdcxx-ng
+
+# add your username to the group input and relogin or reboot
+sudo usermod -aG input $USER
+
 
 # Install dependencies
 # For local transcription:
